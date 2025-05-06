@@ -172,7 +172,7 @@ After you have created a game and a board, now add the elements.
     - **Number greater than 200:** no longer belongs to the PinMame ROM, but is evaluated as Custom Switches (user-defined switches). These can trigger events in VPX-Boards in the future.
     - **Numbers greater than 240:** are evaluated by PinMame as negative numbers. 240 is automatically subtracted from this number and a negative sign is prefixed. Examples: 241= -(241-240) = -1, 243 = -3, 260 = -20
 - **I/O Board:** The I/O board to which the switch is connected.
-- **Port:** The number of the input on the I/O board.
+- **Port:** The number of the input on the I/O board.  Example I/O-Board 16-8-1: ![enter image description here](/docs/images/config_tool/Input-Connector_low.png)
 
 ## Switch Matrix
 
@@ -185,9 +185,13 @@ After you have created a game and a board, now add the elements.
 This controls WS2811, WS2812, and other addressable LEDs, also RGBW like SK6812. It doesn't have to be a chain. It can also be strips, or individual LEDs that are connected to each other in another way. The principle of these LEDs, however, is to form a continuous chain, in which the data line only goes in one direction and only as one strand, never in a circle. For control, data is sent to the corresponding LED. This data packet passes by all connected LEDs. Only the LED with the corresponding number responds.
 
 ![enter image description here](/docs/images/config_tool/AddLEDStringMenu.png)
-**Title:** Choose a unique title that helps you identify the light chain. **I/O Board:** The I/O board to which the LED chain is connected. **Port:** Port number of the board to which the LED chain is connected. For the I/O Boards 16-8-1, this is port 25. See the labeling on the board:
+**Title:** Choose a unique title that helps you identify the light chain.
+**I/O Board:** The I/O board to which the LED chain is connected.
+**Port:** Port number of the board to which the LED chain is connected. For the I/O Boards 16-8-1, this is port 25. See the labeling on the board:
+
 ![enter image description here](/docs/images/config_tool/LED-Connector_low.png)
-**LED Type:** Here the color type is specified. Whether RGB, GBR, BRG, RGBW, and so on... The transferred color values are put into the right order with this. **Amount of LEDs:** Number of LEDs in the chain.
+**LED Type:** Here the color type is specified. Whether RGB, GBR, BRG, RGBW, and so on... The transferred color values are put into the right order with this.
+**Amount of LEDs:** Number of LEDs in the chain.
 
 ### Segments
 
@@ -240,7 +244,7 @@ Pulse Width Modulation (PWM) is a technique where the output voltage is regulate
 - **Type:** Since there are different types of controllable hardware with higher voltage, select the corresponding type here.
 - **Number:** This number is received by the board from PinMame from the simulated ROM. This means that the number must be the same number that is also used in the ROM to control this hardware. You can find this number in the manual of the pinball machine.
 - **I/O Board:** The I/O board to which the LED chain is connected.
-- **Port:** The number of the output to which the hardware to be addressed is connected. Example I/O-Board 16-1-1: ![enter image description here](/docs/images/config_tool/PWM-Connector_low.png)
+- **Port:** The number of the output to which the hardware to be addressed is connected. Example I/O-Board 16-8-1: ![enter image description here](/docs/images/config_tool/PWM-Connector_low.png)
 
 
 ![enter image description here](/docs/images/config_tool/AddPWMMenu2.png)
